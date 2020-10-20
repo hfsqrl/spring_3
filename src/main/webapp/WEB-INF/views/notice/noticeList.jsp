@@ -104,7 +104,7 @@
 	$(".c1").click(function () {
 		var c = $(this).attr("title")
 		$("#curPage").val(c)
-		$("kind").val(kind)
+		$("#kind").val(kind)
 		$("#search").val(search)
 		$("#searchForm").submit()
 	})
