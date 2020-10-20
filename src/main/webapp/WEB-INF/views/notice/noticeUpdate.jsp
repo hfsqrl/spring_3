@@ -65,7 +65,7 @@
 	    <button type="submit" class="btn btn-default">Update</button>
 	  </form>
 	</div>
-<script type="text/javascript" src="../resouces/js/boardWrite.js">
+<script type="text/javascript" src="../resources/js/boardWrite.js">
 
 </script>
 </body>
