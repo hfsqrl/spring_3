@@ -40,7 +40,7 @@
 					<option value="con">Contents</option>
 				</select>
 				
-				<input id="msg" type="text" class="form-control" name="search" placeholder="Additional Info">
+				<input id="search" type="text" class="form-control" name="search" placeholder="Additional Info">
 			
 				<div class="input-group-btn">
 					<button class="btn btn-default" type="submit">
@@ -52,6 +52,7 @@
 	</div>
 	</div>
   
+  <div>
   <table class="table table-hober">
   	<tr>
   		<td>Num</td>
@@ -71,6 +72,7 @@
   		
   	</c:forEach>
   </table>
+  </div>
   
 	<div>
 	
