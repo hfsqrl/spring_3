@@ -98,7 +98,7 @@
 		kind = 'tt'
 	}
 		
-	$("kind").val(kind)
+	$("#kind").val(kind)
 	$("#search").val(search)
 	
 	$(".c1").click(function () {
