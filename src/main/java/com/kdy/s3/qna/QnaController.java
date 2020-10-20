@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class QnaController {
 	
 	@RequestMapping(value = "qnaList")
-	public void qnaList() throws Exception {
-		System.out.println("Qna List");
+	public void qnaList() {
+		System.out.println("qna list");
 	}
 
 }
