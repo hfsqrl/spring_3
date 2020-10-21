@@ -13,9 +13,23 @@ public class QnaService {
 	@Autowired
 	private QnaDAO qnaDAO;
 	
+	public int qnaReply(QnaDTO qnaDTO) throws Exception {
+		QnaDTO parent = qnaDAO.qnaSelect(qnaDTO.getNum());
+		int result = qnaDAO.qnaReplyUpdate(parent);
+		qnaDTO.setRef(parent.getRef());
+		qnaDTO.setStep(parent.getStep()+1);
+		qnaDTO.setDepth(parent.getDepth()+1);
+		return qnaDAO.qnaReply(qnaDTO);
+		
+	}
+	
 	public QnaDTO qnaSelect(long num) throws Exception {
 		return qnaDAO.qnaSelect(num);
 	}
+	
+	public int qnaWrite(QnaDTO qnaDTO)throws Exception{
+		return qnaDAO.qnaWrite(qnaDTO);
+	}	
 	
 	public List<QnaDTO> qnaList(Pager pager) throws Exception {
 		System.out.println("service list");

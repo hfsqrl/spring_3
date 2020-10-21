@@ -18,8 +18,8 @@
 <div class="container">
 	<h3>QnA List</h3>
 	<div class="row">
-	<div class="col-sm-5">
-		<form action="./QnaList">
+	<div class="col-sm-8">
+		<form action="./qnaList">
 			<div class="input-group">
 				<select class="input-group-sm" id="sel1" name="kind">
 					<option value="tt">Title</option>
@@ -51,7 +51,7 @@
   		<tr>
   			<td>${dto.num} : ${vs.last} </td>
   			<td>
-	  			<a href="./QnaSelect?num=${dto.num}">
+	  			<a href="./qnaSelect?num=${dto.num}">
 		  			<c:forEach begin="1" end="${dto.depth}">--</c:forEach>
 		  			${dto.title}
 	  			</a>
@@ -67,20 +67,20 @@
 	<div>
 	
 		<c:if test="${pager.beforeCheck}">
-			<a href="./QnaList?curPage=${pager.startNum-1}&kind=${pager.kind}&search=${pager.search}">[이전]</a>
+			<a href="./qnaList?curPage=${pager.startNum-1}&kind=${pager.kind}&search=${pager.search}">[이전]</a>
 		</c:if>
 		
 		<c:forEach begin="${pager.startNum}" end="${pager.lastNum}" var="i">
-	  		<a href="./QnaList?curPage=${i}&kind=${pager.kind}&search=${pager.search}">${i}</a>
+	  		<a href="./qnaList?curPage=${i}&kind=${pager.kind}&search=${pager.search}">${i}</a>
 	  	</c:forEach>
 	  	
 	  	<c:if test="${pager.nextCheck}">
-		<a href="./QnaList?curPage=${pager.lastNum+1}&kind=${pager.kind}&search=${pager.search}">[다음]</a>
+		<a href="./qnaList?curPage=${pager.lastNum+1}&kind=${pager.kind}&search=${pager.search}">[다음]</a>
 		</c:if>
 		
 	</div>
   
-	<a href="./QnaWrite" class="btn btn-danger">Write</a>
+	<a href="./qnaWrite" class="btn btn-danger">Write</a>
   
 </div>
 

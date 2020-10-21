@@ -29,6 +29,7 @@ public class QnaDAOTest extends MyTestCase {
 		// update
 		qnaDAO.qnaReplyUpdate(parent);
 		
+		System.out.println(parent.getRef());
 		
 		// 부모글 정보 먼저 조회
 		// 부모 글의 정보로 답글에 정보를 입력
